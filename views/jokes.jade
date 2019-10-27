@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  - var title = "Jokes Nation"
+  h1= title
+  p Welcome to #{title}
+  form(name="add-joke", method="post", action="/jokes")
+    div.input
+      span.label Add Joke
+      input(type="text", name="content")
+    div.actions
+        input(type="submit", value='add')
